@@ -25,7 +25,7 @@ The application comes pre-configured with rich sample data so it is fully functi
   3. *Executive Strategy & Go-To-Market Alignment*: 5 speakers, ~31 min, 5 action items, 4 topics.
   4. *Quick 1-on-1 Design Sync: Component Styling*: 2 speakers, ~4 min, **0 action items** (tests empty state).
 - **How to access seeded data:**
-  - In the UI, navigate to **All Meetings** (`http://localhost:3000/meetings?tab=all`) to browse all seeded meetings, filter by duration or date, and click into any meeting to inspect the transcript, waveform sync, and AI summary.
+  - In the UI, navigate to **All Meetings** (`https://fireflies-clone-inky.vercel.app/meetings`) to browse all seeded meetings, filter by duration or date, and click into any meeting to inspect the transcript, waveform sync, and AI summary.
 
 ---
 
@@ -39,7 +39,7 @@ This submission consists of:
    - `README.md`: Complete setup instructions, prerequisites, architecture overview, database schema, API reference, and assumptions.
    - `Fireflies Clone — Technical Architecture Blueprint.md`: Complete architectural specification.
 3. **Demo**:
-   - Local: `http://localhost:3000` (frontend) & `http://127.0.0.1:8000/docs` (interactive Swagger API).
+   - Local: `https://fireflies-clone-h5klhvie9-averion-ops.vercel.app` (frontend) & `https://fireflies-clone-backend-0pqr.onrender.com/docs` (interactive Swagger API).
    - Hosted deployment links can be deployed to Vercel (frontend) and Render/Railway (backend) as outlined in Section 8.
 
 ---
