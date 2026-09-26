@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Product Roadmap & Sprint Planning (Q3)",
+    "meeting_date": "2026-09-24T14:00:00Z",
+    "duration_seconds": 1320,
+    "media_url": "/sample-media/sample-meeting-audio.mp3",
+    "participants": ["Sarah Chen", "Alex Rivera", "Dev Patel", "Elena Rostova"],
+    "summary": "The product and engineering leadership aligned on major Q3 goals, prioritizing the mobile app redesign, API v2 specifications, and search latency improvements. Elena showcased interactive prototypes for the navigation overhaul, which received positive feedback. Alex highlighted backend database optimizations required to maintain sub-100ms transcript queries. Action items were distributed across UI design, backend benchmarking, and API documentation.",
+    "topics": [
+      {
+        "title": "Q3 Objective Review & High-Level Priorities",
+        "start_time_seconds": 0.0,
+        "order_index": 0
+      },
+      {
+        "title": "Mobile App Redesign & Navigation Overhaul",
+        "start_time_seconds": 280.0,
+        "order_index": 1
+      },
+      {
+        "title": "Performance Optimizations & Database Indexing",
+        "start_time_seconds": 640.0,
+        "order_index": 2
+      },
+      {
+        "title": "API v2 Transition & Documentation Milestones",
+        "start_time_seconds": 980.0,
+        "order_index": 3
+      }
+    ],
+    "action_items": [
+      {
+        "text": "Finalize mobile navigation wireframes in Figma",
+        "assignee": "Elena Rostova",
+        "is_completed": false,
+        "due_date": "2026-09-30"
+      },
+      {
+        "text": "Benchmark SQLite query execution under high concurrency",
+        "assignee": "Alex Rivera",
+        "is_completed": true,
+        "due_date": "2026-09-25"
+      },
+      {
+        "text": "Draft API v2 migration guide for frontend team",
+        "assignee": "Dev Patel",
+        "is_completed": false,
+        "due_date": "2026-10-02"
+      },
+      {
+        "text": "Publish sprint goals on the company Notion wiki",
+        "assignee": "Sarah Chen",
+        "is_completed": true,
+        "due_date": "2026-09-24"
+      },
+      {
+        "text": "Schedule weekly UX review with stakeholders",
+        "assignee": null,
+        "is_completed": false,
+        "due_date": "2026-10-05"
+      }
+    ],
+    "raw_transcript": "[00:00:00] Sarah Chen: Good afternoon everyone. Let's get started with our Q3 roadmap and sprint kickoff.\n[00:00:25] Alex Rivera: Thanks Sarah. On the backend side, our priority is supporting high volume transcription queries with zero stutter.\n[00:00:58] Dev Patel: From the frontend perspective, we want the player seeking and transcript highlight loop to be completely instantaneous.\n[00:01:35] Elena Rostova: I've also completed the initial design pass on the meeting detail layout, including the player sync controls.\n[00:02:10] Sarah Chen: Fantastic. Can we first look at the overall objectives before we dive into individual sprint tickets?\n[00:03:00] Alex Rivera: Absolutely. Our primary metric is keeping API response times under 50ms for meeting listings and search.\n[00:03:45] Dev Patel: We should also make sure our TanStack Query cache invalidations are rock-solid whenever meetings are updated.\n[00:04:40] Elena Rostova: Moving to section two: the mobile navigation. I've prepared three variations for the responsive drawer and tabs.\n[00:05:30] Sarah Chen: I prefer option B because it preserves vertical space for the transcript reader on smaller screens.\n[00:06:15] Elena Rostova: Makes sense. I'll refine the Figma tokens accordingly and share the export by Wednesday.\n[00:07:00] Dev Patel: That works well for me. I can start building the presentation components right after.\n[00:08:00] Alex Rivera: Next on our agenda is performance. We noticed full-text searches on large transcripts need proper composite indexing.\n[00:08:50] Sarah Chen: Does the current SQLite schema with cascade deletion handle concurrent read operations smoothly?\n[00:09:40] Alex Rivera: Yes, with WAL mode and proper foreign key pragmas, it handles our intended workload easily.\n[00:10:30] Dev Patel: Are we still introducing the new /api/v1/meetings endpoints this week?\n[00:11:15] Alex Rivera: Yes, the REST endpoints are completely versioned and match the OpenAPI contract exactly.\n[00:12:00] Sarah Chen: Excellent. Let's make sure the action item toggle and delete endpoints have full integration test coverage.\n[00:12:45] Dev Patel: I'll also add optimistic updates in the client so checkboxes flip with immediate visual feedback.\n[00:13:30] Elena Rostova: Please ensure the completed items have clear strikethrough styling and accessible contrast ratios.\n[00:14:15] Sarah Chen: Let's summarize our action items and wrap up on time. Elena, wireframes; Alex, benchmark tests; Dev, API guide.\n[00:15:00] Alex Rivera: Sounds like a solid plan. Thanks team!\n[00:15:30] Dev Patel: Talk to you all at tomorrow's standup.\n[00:16:00] Elena Rostova: Goodbye everyone!"
+  },
+  {
+    "title": "Weekly Engineering Standup & Tech Debt Review",
+    "meeting_date": "2026-09-22T09:30:00Z",
+    "duration_seconds": 900,
+    "media_url": "/sample-media/sample-meeting-audio.mp3",
+    "participants": ["Dev Patel", "Alex Rivera", "Marcus Vance"],
+    "summary": "Engineering team held their recurring technical sync to address platform reliability and continuous integration bottlenecks. Marcus reported on GitHub Actions cache improvements that cut test run times in half. Alex shared findings on SQLite indexing strategies for transcript segments. Dev reviewed progress on migrating query state to TanStack Query hooks.",
+    "topics": [
+      {
+        "title": "Standup Round-robin & Blocker Check",
+        "start_time_seconds": 0.0,
+        "order_index": 0
+      },
+      {
+        "title": "Database Connection Management & Index Tuning",
+        "start_time_seconds": 310.0,
+        "order_index": 1
+      },
+      {
+        "title": "Flaky CI Pipeline Resolution & Docker Caching",
+        "start_time_seconds": 620.0,
+        "order_index": 2
+      }
+    ],
+    "action_items": [
+      {
+        "text": "Add composite index on transcript segments table",
+        "assignee": "Alex Rivera",
+        "is_completed": true,
+        "due_date": "2026-09-23"
+      },
+      {
+        "text": "Investigate GitHub Actions test timeout issue",
+        "assignee": "Marcus Vance",
+        "is_completed": false,
+        "due_date": "2026-09-27"
+      },
+      {
+        "text": "Upgrade React Query to TanStack Query v5 in web repo",
+        "assignee": "Dev Patel",
+        "is_completed": false,
+        "due_date": "2026-09-29"
+      }
+    ],
+    "raw_transcript": "[00:00:00] Alex Rivera: Morning everyone. Quick standup today, followed by tech debt updates.\n[00:00:30] Marcus Vance: Good morning. On my side, CI builds were failing intermittently due to apt mirror timeouts.\n[00:01:10] Dev Patel: I noticed that on the PR builds yesterday. Glad you caught it.\n[00:01:45] Marcus Vance: I switched us to pinned Ubuntu mirrors and enabled GitHub Actions layer caching. Run time dropped from 8 minutes to 3.5 minutes.\n[00:02:30] Alex Rivera: That's a huge win for team productivity. How about local test execution?\n[00:03:10] Dev Patel: Local pytest runs finish in under two seconds using our in-memory SQLite fixtures.\n[00:04:00] Alex Rivera: Regarding tech debt: I added composite indexes on (meeting_id, sequence_index) to speed up sequential segment reads.\n[00:04:55] Dev Patel: That directly helps the transcript viewer render without layout thrashing.\n[00:05:40] Marcus Vance: Are there any migration scripts required for developers pulling main?\n[00:06:20] Alex Rivera: None at all. Base.metadata.create_all handles table initialization and foreign keys are verified on connect.\n[00:07:15] Dev Patel: Awesome. I'll finish up the action item complete toggle endpoint today.\n[00:08:00] Alex Rivera: Perfect. Keep up the great work everyone."
+  },
+  {
+    "title": "Executive Strategy & Go-To-Market Alignment",
+    "meeting_date": "2026-08-15T16:00:00Z",
+    "duration_seconds": 2880,
+    "media_url": "/sample-media/sample-meeting-audio.mp3",
+    "participants": ["Sarah Chen", "Marcus Vance", "Elena Rostova", "Chloe Bennett", "David Kim"],
+    "summary": "Executive alignment on annual revenue targets, enterprise feature requirements, and European expansion plans. David reviewed Q2 sales performance showing a 40% uptick in customer interest for automated meeting transcription. Chloe detailed customer demands for strict data governance, leading to Marcus outlining our EU data residency roadmap. Sarah confirmed the timeline for enterprise tier release.",
+    "topics": [
+      {
+        "title": "Financial Targets & Q2 Retrospective",
+        "start_time_seconds": 0.0,
+        "order_index": 0
+      },
+      {
+        "title": "Enterprise Pricing Tier & SLA Guarantees",
+        "start_time_seconds": 580.0,
+        "order_index": 1
+      },
+      {
+        "title": "European Expansion & GDPR Compliance",
+        "start_time_seconds": 1420.0,
+        "order_index": 2
+      },
+      {
+        "title": "Sales Pipeline & Partner Integrations",
+        "start_time_seconds": 2100.0,
+        "order_index": 3
+      }
+    ],
+    "action_items": [
+      {
+        "text": "Update enterprise pricing calculator on marketing site",
+        "assignee": "Chloe Bennett",
+        "is_completed": true,
+        "due_date": "2026-08-20"
+      },
+      {
+        "text": "Complete GDPR security review for EU data residency",
+        "assignee": "Marcus Vance",
+        "is_completed": true,
+        "due_date": "2026-08-30"
+      },
+      {
+        "text": "Prepare sales enablement pitch deck for enterprise sales team",
+        "assignee": "Chloe Bennett",
+        "is_completed": true,
+        "due_date": "2026-08-25"
+      },
+      {
+        "text": "Review contractual SLA uptime tiers with legal",
+        "assignee": "David Kim",
+        "is_completed": false,
+        "due_date": "2026-10-15"
+      },
+      {
+        "text": "Coordinate co-marketing webinar with strategic partners",
+        "assignee": "Sarah Chen",
+        "is_completed": false,
+        "due_date": "2026-10-10"
+      },
+      {
+        "text": "Finalize hiring plan for Q4 engineering and sales roles",
+        "assignee": "David Kim",
+        "is_completed": true,
+        "due_date": "2026-09-01"
+      }
+    ],
+    "raw_transcript": "[00:00:00] David Kim: Welcome team. Let's review our strategic goals heading into the fall quarter.\n[00:01:10] Chloe Bennett: Q2 numbers closed very strong. Enterprise customer inquiries grew by 42% quarter-over-quarter.\n[00:02:40] Sarah Chen: The key driver is team collaboration around meeting summaries and actionable items.\n[00:04:00] David Kim: Customers want guarantee of reliable retrieval, clean transcripts, and easy audio seeking.\n[00:06:15] Elena Rostova: From a UX perspective, maintaining an uncluttered reading experience while retaining rich metadata is essential.\n[00:08:30] Marcus Vance: On the compliance side, larger prospects are asking for European regional data hosting.\n[00:10:50] David Kim: Chloe, how many deals in the current pipeline depend on GDPR compliance?\n[00:12:20] Chloe Bennett: At least seven major accounts representing roughly $1.2M in annual recurring revenue.\n[00:14:40] Marcus Vance: We can configure a dedicated EU deployment region within three weeks.\n[00:17:10] Sarah Chen: Let's make sure our API and database contracts remain identical across regions.\n[00:20:00] David Kim: Agreed. Consistent REST endpoints and schemas make client maintenance straightforward.\n[00:23:45] Chloe Bennett: I will prepare the sales enablement materials and case studies once the regional availability is certified.\n[00:27:10] Elena Rostova: I'll also update the branding and documentation illustrations to reflect enterprise capabilities.\n[00:31:00] David Kim: Excellent. Let's execute on these commitments and review progress bi-weekly."
+  },
+  {
+    "title": "Quick 1-on-1 Design Sync: Component Styling",
+    "meeting_date": "2026-09-25T11:00:00Z",
+    "duration_seconds": 540,
+    "media_url": "/sample-media/sample-meeting-audio.mp3",
+    "participants": ["Elena Rostova", "Chloe Bennett"],
+    "summary": "Elena and Chloe synchronized on the design token naming convention and accessibility standards for meeting status badges. They agreed on standardized padding tokens and verified color contrast against dark mode backgrounds. No new action items were generated from this informal check-in.",
+    "topics": [
+      {
+        "title": "Design System Tokens & Spacing Audit",
+        "start_time_seconds": 0.0,
+        "order_index": 0
+      },
+      {
+        "title": "Accessible Color Contrast on Badges & Tags",
+        "start_time_seconds": 250.0,
+        "order_index": 1
+      }
+    ],
+    "action_items": [],
+    "raw_transcript": "[00:00:00] Elena Rostova: Hi Chloe! Thanks for hopping on quickly. Just wanted to double check the status badge tokens.\n[00:00:45] Chloe Bennett: Hey Elena! Sure thing. Are we keeping the 4px border radius or moving to full pill rounded badges?\n[00:01:30] Elena Rostova: Let's stick with the 6px rounded corner. It matches our card containers and modal borders cleanly.\n[00:02:25] Chloe Bennett: Sounds great. I also checked the text contrast on the completed action item green badge; it passes WCAG AAA.\n[00:03:15] Elena Rostova: Perfect. That was my main concern. Everything else looks ready to go.\n[00:04:00] Chloe Bennett: Wonderful! Catch you later today.\n[00:04:20] Elena Rostova: Thanks Chloe, bye!"
+  }
+]
